@@ -7,4 +7,3 @@ User_age = '5'
 result = f"My name is {User_name}, I am {User_age} years old {smile_footprint}"
 
 print(result)
-print(result)
