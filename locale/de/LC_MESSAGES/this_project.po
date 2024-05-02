@@ -1,0 +1,35 @@
+# French translations for PACKAGE package
+# Traductions fran�aises du paquet PACKAGE.
+# Copyright (C) 2024 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-01 10:03+0300\n"
+"PO-Revision-Date: 2024-05-01 10:30+0300\n"
+"Last-Translator: <EMAIL@ADDRESS>\n"
+"Language-Team: French\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CP1252\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\translation.py:11
+msgid "Entrez votre nom: "
+msgstr "Geben Sie Ihren Namen ein: "
+
+#: .\translation.py:14
+msgid "Enter your surname: "
+msgstr "Geben Sie Ihren Nachnamen ein: "
+
+#: .\translation.py:18
+msgid "Your name will be changed"
+msgstr "Ihr Name wird geändert"
+
+#: .\translation.py:22
+msgid "Hello"
+msgstr "Hallo"
