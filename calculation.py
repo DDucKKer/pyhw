@@ -97,6 +97,8 @@ else:
     print('Bи стільки не зїсте, і це все гроші в смітник!')
 
 print(hasht)
-total_cost = Decimal(str(int(total_calorie) * KKAL_COST)).quantize((Decimal('0.00')))
+
+total_cost = (Decimal(total_calorie) * Decimal(KKAL_COST)).quantize((Decimal('0.00')))
+
 
 print(f'Загальна ціна - {total_cost}')
