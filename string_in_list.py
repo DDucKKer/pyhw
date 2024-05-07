@@ -1,5 +1,4 @@
 string = "київ,оДеса     Львів.житоМИР,уЖгОрОд.....ХарКІВ       , слАвУтИч".replace('.', ',').replace(' ', ',')
-
 mass = list(filter(None, string.title().split(',')))
 
 print(mass)
