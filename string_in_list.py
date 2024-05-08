@@ -1,7 +1,8 @@
-string = "київ,оДеса     Львів.житоМИР,уЖгОрОд.....ХарКІВ       , слАвУтИч".replace('.', ',').replace(' ', ',')
-mass = list(filter(None, string.title().split(',')))
+string = "київ,оДеса     Львів.житоМИР,уЖгОрОд.....ХарКІВ       , слАвУтИч"
+string = string.replace('.', ',').replace(' ', ',').title().split(',')
+citiesList = list(filter(None, string))
 
-print(mass)
+print(citiesList)
 
-for i in mass:
+for i in citiesList:
     print(f'Я \u2764 {i}!')
