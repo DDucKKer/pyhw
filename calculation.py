@@ -91,7 +91,7 @@ print(hasht)
 
 if total_calorie < 1000:
     print('Bи, мабуть залишитеся голодним!')
-elif 1000 < total_calorie < 1500:
+elif total_calorie < 1500:
     print('Це саме ваш варіант вечері!')
 else:
     print('Bи стільки не зїсте, і це все гроші в смітник!')
