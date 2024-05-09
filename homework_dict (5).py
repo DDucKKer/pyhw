@@ -1,5 +1,4 @@
-﻿from pprint import pprint
-"""
+﻿"""
 зауважте, що значення, що зберігається в кожному елементі - теж словник, і доступ до вкладеного списку 
 здійснюється за механізмом 
 student[outer_dict_key][inner_dict_key]
@@ -53,4 +52,3 @@ for i in students:
 
 avg_point = all_points/len(students)
 print(f"Середній бал по групі: {avg_point}")
-# pprint(students)
