@@ -41,6 +41,13 @@ students['Павло Тичина'] = {
     'Середній бал': 90
 }
 
+print("Студенти у яких середній бал більше 90:")
+for i in students:
+    if students[i]['Середній бал'] >= 90:
+        print(f"Ім'я: {i}, Середній бал: {students[i]['Середній бал']}")
+
+print('#' * 80)
+
 all_points = 0
 for i in students:
     all_points += students[i]['Середній бал']
@@ -48,9 +55,5 @@ for i in students:
         students[i]['Номер телефону'] = input(f"Номер телефону {i} відсутній. Введіть номер його/її батьків:")
         print('#' * 80)
 
-    if students[i]['Середній бал'] >= 90:
-        print(f"Ім'я: {i}, Середній бал: {students[i]['Середній бал']}")
-        print('#' * 80)
-
-avg_point = all_points/len(students)
+avg_point = all_points / len(students)
 print(f"Середній бал по групі: {avg_point}")
