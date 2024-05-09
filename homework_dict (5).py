@@ -46,9 +46,11 @@ for i in students:
     all_points += students[i]['Середній бал']
     if students[i]['Номер телефону'] is None:
         students[i]['Номер телефону'] = input(f"Номер телефону {i} відсутній. Введіть номер його/її батьків:")
+        print('#' * 80)
 
     if students[i]['Середній бал'] >= 90:
         print(f"Ім'я: {i}, Середній бал: {students[i]['Середній бал']}")
+        print('#' * 80)
 
 avg_point = all_points/len(students)
 print(f"Середній бал по групі: {avg_point}")
