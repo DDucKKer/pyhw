@@ -41,21 +41,19 @@ students['Павло Тичина'] = {
     'Середній бал': 90
 }
 
-print("Студенти у яких середній бал більше 90:")
-for i in students:
-    if students[i]['Середній бал'] >= 90:
-        print(f"Ім'я: {i}, Середній бал: {students[i]['Середній бал']}")
-
-print('#' * 80)
+hasht = '#' * 80
+print(hasht)
 
 all_points = 0
-for i in students:
-    all_points += students[i]['Середній бал']
-    if students[i]['Номер телефону'] is None:
-        students[i]['Номер телефону'] = input(f"Номер телефону {i} відсутній. Введіть номер його/її батьків:")
-        print('#' * 80)
-    # if students[i]['Середній бал'] >= 90:
-    #     print(f"Ім'я: {i}, Середній бал: {students[i]['Середній бал']}")
+for student_name in students:
+    all_points += students[student_name]['Середній бал']
+    if students[student_name]['Номер телефону'] is None:
+        students[student_name]['Номер телефону'] = input(f"Номер телефону {student_name} відсутній. Введіть номер його/її батьків:")
+        print(hasht)
+    if students[student_name]['Середній бал'] >= 90:
+        print(f"Ім'я: {student_name}, Середній бал: {students[student_name]['Середній бал']}")
+        print(hasht)
 
-avg_point = all_points / len(students)
-print(f"Середній бал по групі: {avg_point}")
+if len(students) != 0:
+    avg_point = all_points / len(students)
+    print(f"Середній бал по групі: {avg_point}")
