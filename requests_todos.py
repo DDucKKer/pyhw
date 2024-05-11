@@ -9,5 +9,5 @@ todos = response.json()['todos']
 
 print('UNCOMPLETED tasks: ')
 for todo in todos:
-    if todo["completed"] is False:
+    if not todo["completed"]:
         print(todo['todo'])
