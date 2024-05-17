@@ -1,7 +1,4 @@
-# age = int(input("Введіть свій вік: "))
-
-
-def check_age(age):
+def check_age(age: int) -> str:
     if age <= 0:
         return "Передано не валідне значення віку!"
     elif age <= 18:
@@ -12,4 +9,5 @@ def check_age(age):
         return "Щасливої пенсії!"
 
 
-# print(check_age(age))
+age = int(input("Введіть свій вік: "))
+print(check_age(age))
