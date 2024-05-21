@@ -9,5 +9,5 @@ def check_age(age: int) -> str:
         return "Щасливої пенсії!"
 
 
-age = int(input("Введіть свій вік: "))
-print(check_age(age))
+# age = int(input("Введіть свій вік: "))
+# print(check_age(age))
