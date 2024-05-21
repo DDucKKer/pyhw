@@ -1,3 +1,8 @@
+import pytest
+
+
+from random import randint
+
 from age_checker import check_age
 
 
@@ -27,3 +32,6 @@ def test_four_check_age():
     age = 70
     actual_result = check_age(age)
     assert actual_result == expected_result
+
+
+#
