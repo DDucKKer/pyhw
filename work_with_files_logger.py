@@ -9,7 +9,6 @@ import functools
 #     file.write('fffffffawdadwa')
 # data = file.read()
 # print(data)
-iso_country = 'UA'
 
 
 def logger(file_name='log_data.csv'):
