@@ -88,6 +88,10 @@ class Car:
         with open(file_name, mode='a', encoding='utf-8') as file:
             file.write(f'{self.manufacturer};{self.model}\n')
 
+        file_name = 'cars.csv'
+        with open(file_name, mode='a', encoding='utf-8') as file:
+            file.write(f'{self.manufacturer};{self.model}\n')
+
     def __str__(self):
         return (f"{self.year} {self.manufacturer} {self.model}, "
                 f"пробіг: {self.mileage} км, витрата палива: {self.fuel_consumption} л/100км")
@@ -101,7 +105,6 @@ class Truck(Car):
     def __init__(self, year, manufacturer, model, fuel_consumption, carrying_capacity: int = 0):
         super().__init__(year, manufacturer, model, fuel_consumption)
         self.carrying_capacity = carrying_capacity
-
     def __str__(self):
         return super().__str__() + f", вантажопідйомність: {self.carrying_capacity} т"
 
