@@ -8,7 +8,7 @@ class Human:
         self.money = 0
 
     def __str__(self):
-        return f'Human {self.name}'
+        return f'I am {self.name}'
 
     # def __repr__(self):
     #     return f'Human {self.name}'
@@ -16,7 +16,9 @@ class Human:
 
 
 class Player:
-    def __init__(self, skills: list[str]):
+    def __init__(self, name: str, skills: list[str]):
+        super().__init__()
+        self.name = name
         self.skills = skills
 
 
@@ -49,7 +51,9 @@ class SportTeam:
         self.players.remove(player)
 
 
-# team = SportTeam('Desna')
+team = SportTeam('Desna')
+maxim2 = Player(name='Max', skills=['soccer'])
+team.players.append(maxim2)
 # maxim = Human('Max')
 # team.players.append(maxim)
 # team.pay_salary()
@@ -77,6 +81,12 @@ class Car:
         self.mileage = 0
         self.year = year
         self.fuel_consumption = fuel_consumption
+        self.write_log()
+
+    def write_log(self):
+        file_name = 'cars.csv'
+        with open(file_name, mode='a', encoding='utf-8') as file:
+            file.write(f'{self.manufacturer};{self.model}\n')
 
         file_name = 'cars.csv'
         with open(file_name, mode='a', encoding='utf-8') as file:
@@ -92,31 +102,15 @@ class Car:
 
 
 class Truck(Car):
-    def __init__(
-            self,
-            year: int = 2020,
-            manufacturer: str = 'Unknown',
-            model: str = 'Unknown',
-            fuel_consumption: float = 0.0,
-            carrying_capacity: int = 0
-    ):
+    def __init__(self, year, manufacturer, model, fuel_consumption, carrying_capacity: int = 0):
         super().__init__(year, manufacturer, model, fuel_consumption)
         self.carrying_capacity = carrying_capacity
-
     def __str__(self):
         return super().__str__() + f", вантажопідйомність: {self.carrying_capacity} т"
 
 
 class SportCar(Car):
-    def __init__(
-            self,
-            year: int = 2020,
-            manufacturer: str = 'Unknown',
-            model: str = 'Unknown',
-            fuel_consumption: float = 0.0,
-            max_speed: int = 0,
-            price: int = 0
-    ):
+    def __init__(self, year, manufacturer, model, fuel_consumption, max_speed: int = 0, price: int = 0):
         super().__init__(year, manufacturer, model, fuel_consumption)
         self.max_speed = max_speed
         self.price = price
